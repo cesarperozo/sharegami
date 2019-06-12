@@ -1,0 +1,13 @@
+body {
+  background: #284b63;
+}
+
+.navbar-brand {
+  border-right: 0 !important;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navbar-brand img {
+  height: 60px;
+}
