@@ -8,12 +8,9 @@ const erroHandler = require('errorhandler');
 
 const routes = require('../routes/index');
 
-
-
-module.exports = app => {
+module.exports = (app) => {
 
     //settings
-    app.set('port', process.env.PORT || 5000);
     app.set('views', path.join(__dirname, '../views'));
     app.engine('.hbs', exphbs({
         defaultLayout: 'main',
@@ -27,8 +24,8 @@ module.exports = app => {
 
     //middlewares
     app.use(morgan('dev'));
-    app.use(multer({dest: path.join(__dirname, '../public/upload/temp')}).single('image'));
-    app.use(express.urlencoded({extended: false}));
+    app.use(multer({ dest: path.join(__dirname, '../public/upload/temp') }).single('image'));
+    app.use(express.urlencoded({ extended: false }));
     app.use(express.json());
 
     //routes

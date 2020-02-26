@@ -1,5 +1,5 @@
 module.exports = {
   database: {
-    URI: "mongodb://localhost/sharegami"
+    URI: process.env.MONGODB_URI || "mongodb://localhost/sharegami"
   }
 };

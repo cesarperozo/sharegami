@@ -1,0 +1,13 @@
+{
+    "name": "sharegami",
+    "version": 2,
+    "env": {
+        "MONGODB_URI": "@sharegami-mongodb-uri"
+    },
+    "builds": [
+        {
+            "src": "src/index.js",
+            "use": "@now/node-server"
+        }
+    ]
+}

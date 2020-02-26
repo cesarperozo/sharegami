@@ -7,9 +7,9 @@ require('./database');
 
 //
 const app = config(express());
-
+const port = process.env.APP_PORT || 80;
 //start server
-app.listen(app.get('port'), () => {
-    console.log('Server on port', app.get('port'))
+app.listen(port, () => {
+    console.log('Server on port', port)
 });
 
